@@ -1,0 +1,65 @@
+@import "tailwindcss";
+
+:root {
+  font-family: Inter, system-ui, sans-serif;
+  color: #EAE5DF;
+  background: #080808;
+
+  --color-bg: #080808;
+  --color-surface: #171717;
+  --color-accent: #7F2929;
+  --color-text: #EAE5DF;
+  --color-muted: #88827D;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+button {
+  transition: all 0.2s ease-in-out;
+}
+
+@keyframes tabFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tab-content {
+  animation: tabFadeIn 300ms ease-out;
+}
+
+@keyframes toast-slide-down {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.animate-toast-enter {
+  animation: toast-slide-down 300ms ease-out forwards;
+}
